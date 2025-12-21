@@ -195,4 +195,3 @@ function blowCandle() {
     }
 }
 window.blowCandle = blowCandle;
-
