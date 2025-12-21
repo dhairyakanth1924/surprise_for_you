@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Surprise For You</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Quicksand:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background Elements -->
+    <div class="background-animation">
+        <div class="gradient-sphere one"></div>
+        <div class="gradient-sphere two"></div>
+        <div class="floating-hearts-container" id="floatingHearts"></div>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bg-music" src="song.mp3" loop></audio>
+
+    <main class="glass-container">
+
+        <!-- Page 1: Countdown -->
+        <section id="countdown-page" class="page active">
+            <h1 class="romantic-heading">The wait is almost over....</h1>
+            <div class="countdown-timer">
+                <div class="time-block">
+                    <span id="days">00</span>
+                    <label>Days</label>
+                </div>
+                <div class="separator">:</div>
+                <div class="time-block">
+                    <span id="hours">00</span>
+                    <label>Hours</label>
+                </div>
+                <div class="separator">:</div>
+                <div class="time-block">
+                    <span id="minutes">00</span>
+                    <label>Minutes</label>
+                </div>
+                <div class="separator">:</div>
+                <div class="time-block">
+                    <span id="seconds">00</span>
+                    <label>Seconds</label>
+                </div>
+            </div>
+            <p class="sub-text">Counting down to your special moment</p>
+         
+        </section>
+
+        <!-- Page 2: Birthday Reveal -->
+        <section id="reveal-page" class="page hidden">
+            <h1 class="birthday-title">Happy Birthday!</h1>
+            <p class="birthday-sub">To the soul that make my world brighter Every single day.</p>
+            <div class="heart-pulse">❤️</div>
+            <button class="btn-primary" onclick="goToCelebrate()">Let's Celebrate</button>
+        </section>
+
+        <!-- Page 3: Celebrate -->
+        <section id="celebrate-page" class="page hidden">
+            <button class="nav-back-btn" onclick="goBackToReveal()">← Back</button>
+            <h2 class="celebrate-heading">Make a Wish, My Love</h2>
+            <div class="cake-container">
+                <div class="cake">
+                    <div class="candle">
+                        <div class="flame" id="flame" onclick="blowCandle()"></div>
+                    </div>
+                </div>
+            </div>
+            <p class="instruction">Tap the flame to make a wish!</p>
+            <div class="celebrate-actions">
+                <button class="btn-glass" onclick="goToLetter()">
+                    <span class="icon">💌</span> Open Letter
+                </button>
+                <div class="music-player">
+                    <p>Playing our song...</p>
+                    <div class="fake-audio-waves">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page 4: Love Letter -->
+        <section id="letter-page" class="page hidden">
+            <div class="letter-content">
+                <h2>My Dearest,</h2>
+                <div class="scrollable-text">
+                    <p>
+                        🎉 Happy 23rd Birthday, my beautiful love 🎉💗
+                        Today isn’t just your birthday it’s the day the world became brighter, softer, and more
+                        beautiful… because you were born. 🌸✨
+                        And honestly, I feel so lucky that life brought you into mine. 🫂💞
+
+
+                    </p>
+                    <p>
+                        You’re not just growing older today, you’re growing more kind, more strong, more beautiful —
+                        inside and out. 🧿💫
+                        At 23, you carry so much love in your heart, so much courage in your soul, and so much light
+                        that you don’t even realize how many lives you touch just by being you. 🌷
+
+                    </p>
+                    <p>
+
+                        I know you’ve faced things quietly.
+                        You’ve been strong even when it was hard.
+                        You’ve smiled even when your heart felt heavy.
+                        And I admire you so much for that. 🥺❤
+
+                    </p>
+                    <p>
+                        Thank you for being the way you are
+                        <br>
+                        for your softness 🤍
+                        <br>
+                        your care 🫶🏻
+                        <br>
+                        your madness 😄
+                        <br>
+                        your warmth 🔥
+                        <br>
+                        and your love
+                    </p>
+                    <p>
+                        You make my life calmer, happier, and more meaningful just by existing.
+                        Being with you feels like home 🏡💖
+
+
+                    </p>
+                    <p>
+                        On your 23rd birthday, I wish you:
+                        <br>
+                        ✨ peace in your heart
+                        <br>
+                        ✨ strength for your dreams
+                        <br>
+                        ✨ health, happiness, and endless smiles
+                        <br>
+                        ✨ and a life full of love — the kind you deserve
+
+
+                    </p>
+                    <p>
+                        And I wish for us —
+                        <br>
+                        more memories 📸
+                        <br>
+                        more laughter 😆
+                        <br>
+                        more cuddles 🫂
+                        <br>
+                        more late-night talks 🌙
+                        <br>
+                        and a future where we keep choosing each other, again and again ♾💘
+
+
+
+                    </p>
+
+                    <p>
+                        I hope today you feel special, loved, and celebrated because you truly are. 🎂🎁💐
+                        And no matter where life takes us, remember this:
+                        I’m always here for you.
+
+                    </p>
+                    <p>
+                        Happy Birthday once again, my sunflower 🌻 💗
+                        I love you endlessly, today and always. 🫶🏻🎉💋🎂
+
+                    </p>
+                    <br>
+                    <p class="signature">Forever yours,</p>
+                    <p class="signature-name">Dhairrrrryaaaaa ( Chocopie 🍪) </p>
+                </div>
+                <button class="btn-secondary" onclick="goBackToCelebrate()">Close Letter</button>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
