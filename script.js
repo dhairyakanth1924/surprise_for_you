@@ -1,6 +1,7 @@
 // Configuration: Set the birthday date here
 // Format: YYYY-MM-DDTHH:MM:SS
-const targetDate = new Date("2025-12-24T12:30:00");
+
+const targetDate = new Date("2025-12-24T00:30:00");;
 
 // --- Countdown Logic ---
 const daysEl = document.getElementById("days");
@@ -195,4 +196,5 @@ function blowCandle() {
     }
 }
 window.blowCandle = blowCandle;
+
 
